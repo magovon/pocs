@@ -7,8 +7,15 @@
     <groupId>luis.pocs.classpathisolation</groupId>
     <artifactId>project2</artifactId>
     <version>1.0</version>
+    <packaging>ear</packaging>
 
      <dependencies>
+         <dependency>
+             <groupId>org.jboss.spec.javax.ejb</groupId>
+             <artifactId>jboss-ejb-api_3.1_spec</artifactId>
+             <version>1.0.2.Final</version>
+             <scope>provided</scope>
+         </dependency>
          <dependency>
              <groupId>luis.pocs.classpathisolation</groupId>
              <artifactId>library2</artifactId>
@@ -25,4 +32,14 @@
              <version>4.8.1</version>
          </dependency>
      </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>7.1.1.Final</version>
+            </plugin>
+        </plugins>
+    </build>
 </project>
