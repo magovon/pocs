@@ -13,5 +13,6 @@ public class Class1 {
     public Class1() {
         final DummyLibrary dummyLibrary = new DummyLibrary();
         dummyLibrary.doNothing1();
+        System.out.println("Created instance of Class 1");
     }
 }
