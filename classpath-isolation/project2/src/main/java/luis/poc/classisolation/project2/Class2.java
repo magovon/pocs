@@ -13,12 +13,7 @@ import javax.ejb.Stateless;
  * Time: 2:39 PM
  * To change this template use File | Settings | File Templates.
  */
-@Stateless
 public class Class2 {
-
-    static {
-        System.out.println("Static init of Class 2");
-    }
 
     public Class2()  {
         final DummyLibrary dummyLibrary = new DummyLibrary();

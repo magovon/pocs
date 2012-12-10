@@ -13,5 +13,7 @@
         <module>project2</module>
         <module>library1</module>
         <module>library2</module>
+        <module>ear1</module>
+        <module>ear2</module>
     </modules>
 </project>
