@@ -9,13 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ear2</artifactId>
+    <artifactId>ear3</artifactId>
     <packaging>ear</packaging>
 
     <dependencies>
         <dependency>
             <groupId>luis.pocs.classpathisolation</groupId>
-            <artifactId>project2</artifactId>
+            <artifactId>project3</artifactId>
             <version>1.0</version>
             <type>ejb</type>
         </dependency>
@@ -31,13 +31,12 @@
                 <!-- configuring the ear plugin -->
                 <configuration>
                     <!-- Specify the artifact name for the EAR -->
-                    <finalName>classpath-isolation-ear2</finalName>
-                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <finalName>classpath-isolation-ear3</finalName>
                     <!--<modules>-->
                         <!--&lt;!&ndash; specify which EJB modules to include in the EAR &ndash;&gt;-->
                         <!--<ejbModule>-->
                             <!--<groupId>luis.pocs.classpathisolation</groupId>-->
-                            <!--<artifactId>project2</artifactId>-->
+                            <!--<artifactId>project3</artifactId>-->
                         <!--</ejbModule>-->
                     <!--</modules>-->
                 </configuration>
@@ -48,7 +47,7 @@
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>7.1.1.Final</version>
                 <configuration>
-                    <filename>classpath-isolation-ear2.ear</filename>
+                    <filename>classpath-isolation-ear3.ear</filename>
                     <skip>false</skip>
                 </configuration>
             </plugin>

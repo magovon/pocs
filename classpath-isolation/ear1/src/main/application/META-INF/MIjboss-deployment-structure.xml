@@ -1,0 +1,30 @@
+<jboss-deployment-structure>
+    <!-- Make sub deployments isolated by default, so they cannot see each others classes without a Class-Path entry -->
+    <ear-subdeployments-isolated>false</ear-subdeployments-isolated>
+    <!-- This corresponds to the top level deployment. For a war this is the war's module, for an ear -->
+    <!-- This is the top level ear module, which contains all the classes in the EAR's lib folder     -->
+    <deployment>
+        <!-- This allows you to define additional dependencies, it is the same as using the Dependencies: manifest attribute -->
+        <!--<exports>-->
+            <!--<include path="luis/poc/classisolation/project1/Class1" />-->
+            <!--<exclude path="/**" />-->
+        <!--</exports>-->
+        <resources>
+            <resource-root path="library1-1.0.jar" />
+        </resources>
+    </deployment>
+
+
+    <sub-deployment name="project1-1.0.jar">
+        <!-- This corresponds to the module for a web deployment -->
+        <!-- it can use all the same tags as the <deployment> entry above -->
+        <!--<exports>-->
+            <!--<include path="luis/poc/classisolation/project1/Class1" />-->
+            <!--<exclude path="/**" />-->
+        <!--</exports>-->
+        <dependencies>
+            <!-- Adds a dependency on a ejb jar. This could also be done with a Class-Path entry -->
+            <module name="library1-1.0.jar" />
+        </dependencies>
+    </sub-deployment>
+</jboss-deployment-structure>

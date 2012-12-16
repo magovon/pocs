@@ -15,5 +15,7 @@
         <module>library2</module>
         <module>ear1</module>
         <module>ear2</module>
+        <module>ear3</module>
+        <module>project3</module>
     </modules>
 </project>

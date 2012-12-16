@@ -27,18 +27,20 @@
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-ear-plugin</artifactId>
-            <version>2.3.2</version>
+            <version>2.8</version>
             <!-- configuring the ear plugin -->
             <configuration>
                 <!-- Specify the artifact name for the EAR -->
                 <finalName>classpath-isolation-ear1</finalName>
-                <modules>
-                    <!-- specify which EJB modules to include in the EAR -->
-                    <ejbModule>
-                        <groupId>luis.pocs.classpathisolation</groupId>
-                        <artifactId>project1</artifactId>
-                    </ejbModule>
-                </modules>
+                <defaultLibBundleDir>lib</defaultLibBundleDir>
+                <!--<modules>-->
+                    <!--&lt;!&ndash; specify which EJB modules to include in the EAR &ndash;&gt;-->
+                    <!--<ejbModule>-->
+                        <!--<groupId>luis.pocs.classpathisolation</groupId>-->
+                        <!--<artifactId>project1</artifactId>-->
+                        <!--<bundleDir>/</bundleDir>-->
+                    <!--</ejbModule>-->
+                <!--</modules>-->
             </configuration>
         </plugin>
         <!-- JBoss AS plugin to deploy ear -->
